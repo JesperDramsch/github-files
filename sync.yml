@@ -5,8 +5,6 @@ group:
     dest: .github/workflows/
   - source: configs/dependabot.yml
     dest: .github/dependabot.yml
-  - source: configs/.pre-commit-config.yaml
-    dest: .pre-commit-config.yaml
   repos: |
     JesperDramsch/ml.recipes
     JesperDramsch/keras-complex
