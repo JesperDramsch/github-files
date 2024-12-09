@@ -1,0 +1,10 @@
+tests:
+- any: [ "tests/**/*" ]
+requirements:
+- any: [ "requirements.txt", "setup.py", "pyproject.toml" ]
+source:
+- src/**/*
+docs:
+- any: [ "docs/**/*", "*.md", "*.rst" ]
+ci:
+- any: [ ".github/**/*", "tox.ini", ".coveragerc" ]
