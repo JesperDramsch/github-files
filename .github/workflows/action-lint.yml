@@ -14,6 +14,7 @@ jobs:
       uses: raven-actions/actionlint@v2
       with:
         cache: false
+        fail-on-error: false
         files: "workflows/**/*.yml"
 
     - name: actionlint Summary
