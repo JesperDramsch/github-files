@@ -43,14 +43,6 @@ repos:
     - --fix
     - --exit-non-zero-on-fix
     - --preview
-- repo: https://github.com/PyCQA/docformatter # Format docstrings
-  rev: v1.7.5
-  hooks:
-  - id: docformatter
-    args:
-    - -s numpy
-    - --black
-    - --in-place
 - repo: https://github.com/jshwi/docsig # Check docstrings against function sig
   rev: v0.53.2
   hooks:
