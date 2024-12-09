@@ -20,6 +20,12 @@ group:
     dest: ./
   repos: |
     JesperDramsch/keras-complex
+
+# pre-commit checks
+- files:
+  - source: configs/python/
+    dest: ./
+  repos: |
     JesperDramsch/python-deadlines
 
 # label sync
