@@ -24,6 +24,6 @@ jobs:
         # [Required] Access token with `workflow` scope.
         token: ${{ secrets.GH_PAT }}
         pull_request_labels: "dependencies, automated"
-        extra_workflow_locations: "workflows/**/*.{yml,yaml}"
+        extra_workflow_locations: "workflows/code-quality, workflows/issue-pr, workflows/python"
         # [Experimental]
         pull_request_branch: "actions-update"
