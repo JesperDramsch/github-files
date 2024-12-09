@@ -23,6 +23,7 @@ jobs:
       with:
         # [Required] Access token with `workflow` scope.
         token: ${{ secrets.GH_PAT }}
+        release_types: "major"
         pull_request_labels: "dependencies, automated"
         extra_workflow_locations: "workflows/code-quality, workflows/issue-pr, workflows/python"
         # [Experimental]
