@@ -1,12 +1,15 @@
 name: Sync Files
 on:
-  push:
-    branches:
-    - main
+  # Trigger when first workflow completes
+  workflow_run:
+    workflows: [ "Lint Github actions workflows" ]
+    types:
+    - completed
   workflow_dispatch:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - name: Checkout Repository
       uses: actions/checkout@master
