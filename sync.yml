@@ -1,0 +1,33 @@
+group:
+# code quality workflow
+- files:
+  - source: workflows/code-quality/
+    dest: .github/workflows/
+  - source: configs/dependabot.yml
+    dest: .github/dependabot.yml
+  repos: |
+    JesperDramsch/ml.recipes
+    JesperDramsch/keras-complex
+    JesperDramsch/data-science-gui.de
+    JesperDramsch/python-deadlines
+    JesperDramsch/advent-of-code
+
+# python workflows
+- files:
+  - source: workflows/python/
+    dest: .github/workflows/
+  repos: |
+    JesperDramsch/keras-complex
+
+# label sync
+- files:
+  - source: workflows/issue-pr/labeler.yml
+    dest: .github/workflows/labeler.yml
+  - source: configs/labeler.yml
+    dest: .github/labeler.yml
+  repos: |
+    JesperDramsch/ml.recipes
+    JesperDramsch/keras-complex
+    JesperDramsch/data-science-gui.de
+    JesperDramsch/python-deadlines
+    JesperDramsch/advent-of-code
