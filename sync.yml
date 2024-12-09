@@ -18,6 +18,8 @@ group:
 - files:
   - source: workflows/python/
     dest: .github/workflows/
+  - source: configs/python/
+    dest: ./
   repos: |
     JesperDramsch/keras-complex
 
