@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Merge minor/patch updates
-        uses: koj-co/dependabot-pr-action@v1.1.12
+        uses: koj-co/dependabot-pr-action@v1
         with:
           token: ${{ secrets.GH_PAT }}
           merge-minor: true
