@@ -3,7 +3,12 @@ name: GitHub Actions Version Updater
 # Controls when the action will run.
 on:
   # can be used to run workflow manually
-  workflow_dispatch:
+  workflow_dispatch: # Trigger when first workflow completes
+
+  workflow_run:
+    workflows: [ "Lint Github actions workflows" ]
+    types:
+    - completed
   schedule:
   # Automatically run on every Sunday
   - cron: '0 0 * * 0'
@@ -11,7 +16,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: ${{ github.event.workflow_run.conclusion != 'success' }}
     steps:
     - uses: actions/checkout@v4
       with:
